@@ -1,0 +1,104 @@
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 4px 0 15px rgba(106, 17, 203, 0.2);
+}
+
+.sidebar-header {
+  padding: 2rem 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.1);
+  letter-spacing: 1px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  width: 100%;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.sidebar-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(8px);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-nav a.active {
+  background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 8, 68, 0.3);
+}
+
+.sidebar-footer {
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.logout-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(255, 8, 68, 0.2);
+}
+
+.logout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 8, 68, 0.3);
+  background: linear-gradient(135deg, #ff0844 0%, #ff8f7a 100%);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .sidebar-nav {
+    padding: 1rem;
+  }
+  
+  .sidebar-nav a {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+}

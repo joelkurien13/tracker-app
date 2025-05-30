@@ -1,24 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import ProjectManager from './component/Admin'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AdminSidebar from './components/AdminSidebar';
+import Projects from './pages/Projects';
+import Dashboard from './pages/Dashboard';
+import Add from './pages/Add';
+import Tasks from './pages/Tasks';
+import Team from './pages/Team';
+import { AppProvider } from './context/AppContext';
+import './App.css';
+import './styles.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<ProjectManager />}>
-          
-        </Route>
-      </Routes>
-      </BrowserRouter>
-    </>
-  )
+    <AppProvider>
+      <Router>
+        <div className="app-container">
+          <AdminSidebar />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/add-project" element={<Add />} />
+              <Route path="/tasks" element={<Tasks />} />
+              <Route path="/team" element={<Team />} />
+            </Routes>
+          </main>
+        </div>
+      </Router>
+    </AppProvider>
+  );
 }
 
-export default App
+export default App;
+
