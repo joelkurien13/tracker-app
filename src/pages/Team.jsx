@@ -1,28 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useAppContext } from '../context/AppContext';
 import '../styles.css';
 
 const Team = () => {
-  const [teamMembers, setTeamMembers] = useState([]);
+  const { teamMembers, addTeamMember, updateTeamMember, deleteTeamMember } = useAppContext();
   const [newMember, setNewMember] = useState({
     name: '',
     email: '',
     role: 'developer',
-    status: 'active'
+    status: 'active',
+    assignedProjects: []
   });
   const [filter, setFilter] = useState('all');
-
-  // Load team members from localStorage on component mount
-  useEffect(() => {
-    const savedTeam = localStorage.getItem('teamMembers');
-    if (savedTeam) {
-      setTeamMembers(JSON.parse(savedTeam));
-    }
-  }, []);
-
-  // Save team members to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem('teamMembers', JSON.stringify(teamMembers));
-  }, [teamMembers]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -36,31 +25,22 @@ const Team = () => {
     e.preventDefault();
     if (!newMember.name.trim() || !newMember.email.trim()) return;
 
-    const member = {
-      id: Date.now(),
-      ...newMember,
-      joinedDate: new Date().toISOString()
-    };
-
-    setTeamMembers(prev => [...prev, member]);
+    addTeamMember(newMember);
     setNewMember({
       name: '',
       email: '',
       role: 'developer',
-      status: 'active'
+      status: 'active',
+      assignedProjects: []
     });
   };
 
   const handleStatusChange = (memberId, newStatus) => {
-    setTeamMembers(prev =>
-      prev.map(member =>
-        member.id === memberId ? { ...member, status: newStatus } : member
-      )
-    );
+    updateTeamMember(memberId, { status: newStatus });
   };
 
   const handleDeleteMember = (memberId) => {
-    setTeamMembers(prev => prev.filter(member => member.id !== memberId));
+    deleteTeamMember(memberId);
   };
 
   const filteredMembers = teamMembers.filter(member => {
@@ -140,6 +120,9 @@ const Team = () => {
             <div className="member-meta">
               <span className="join-date">
                 Joined: {new Date(member.joinedDate).toLocaleDateString()}
+              </span>
+              <span className="projects-count">
+                Projects: {member.assignedProjects?.length || 0}
               </span>
             </div>
             <div className="member-actions">
