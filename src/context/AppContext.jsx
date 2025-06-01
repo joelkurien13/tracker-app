@@ -89,7 +89,7 @@ const INITIAL_DATA = {
     {
       id: 1,
       title: 'Design Homepage',
-      description: 'Create new homepage design with modern UI elements',
+      description: 'Create new dd homepage design with modern UI elements',
       status: 'in-progress',
       priority: 'high',
       projectId: 1,
