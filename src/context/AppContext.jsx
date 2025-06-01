@@ -14,8 +14,8 @@ const INITIAL_DATA = {
   projects: [
     {
       id: 1,
-      name: 'Website Redesign',
-      description: 'Complete overhaul of the company website with modern design and improved UX',
+      name: 'E-commerce Platform Upgrade',
+      description: 'Modernize the existing e-commerce platform with new features and improved user experience',
       status: 'active',
       createdAt: new Date().toISOString(),
       tasks: [],
@@ -23,8 +23,8 @@ const INITIAL_DATA = {
     },
     {
       id: 2,
-      name: 'Mobile App Development',
-      description: 'Development of a new mobile application for iOS and Android platforms',
+      name: 'Mobile Banking App',
+      description: 'Develop a secure and user-friendly mobile banking application with biometric authentication',
       status: 'active',
       createdAt: new Date().toISOString(),
       tasks: [],
@@ -32,8 +32,8 @@ const INITIAL_DATA = {
     },
     {
       id: 3,
-      name: 'Database Migration',
-      description: 'Migrate existing database to a new cloud-based solution',
+      name: 'AI-Powered Analytics Dashboard',
+      description: 'Create an intelligent analytics dashboard with predictive insights and automated reporting',
       status: 'on-hold',
       createdAt: new Date().toISOString(),
       tasks: [],
@@ -41,8 +41,8 @@ const INITIAL_DATA = {
     },
     {
       id: 4,
-      name: 'E-commerce Platform',
-      description: 'Build a new e-commerce platform with payment integration',
+      name: 'Healthcare Management System',
+      description: 'Build a comprehensive healthcare management system for patient records and appointment scheduling',
       status: 'active',
       createdAt: new Date().toISOString(),
       tasks: [],
@@ -50,8 +50,8 @@ const INITIAL_DATA = {
     },
     {
       id: 5,
-      name: 'AI Chatbot Integration',
-      description: 'Implement AI-powered chatbot for customer support',
+      name: 'Smart Home Integration',
+      description: 'Develop a unified platform for smart home device management and automation',
       status: 'active',
       createdAt: new Date().toISOString(),
       tasks: [],
@@ -59,8 +59,8 @@ const INITIAL_DATA = {
     },
     {
       id: 6,
-      name: 'Security Audit',
-      description: 'Conduct comprehensive security audit of all systems',
+      name: 'Supply Chain Optimization',
+      description: 'Implement an AI-driven supply chain optimization system with real-time tracking',
       status: 'completed',
       createdAt: new Date().toISOString(),
       tasks: [],
@@ -68,8 +68,8 @@ const INITIAL_DATA = {
     },
     {
       id: 7,
-      name: 'Cloud Infrastructure',
-      description: 'Set up and configure cloud infrastructure on AWS',
+      name: 'Educational Platform',
+      description: 'Create an interactive online learning platform with video conferencing and course management',
       status: 'active',
       createdAt: new Date().toISOString(),
       tasks: [],
@@ -77,8 +77,8 @@ const INITIAL_DATA = {
     },
     {
       id: 8,
-      name: 'API Gateway',
-      description: 'Implement API gateway for microservices architecture',
+      name: 'Social Media Analytics',
+      description: 'Build a comprehensive social media analytics tool with sentiment analysis and trend prediction',
       status: 'on-hold',
       createdAt: new Date().toISOString(),
       tasks: [],
@@ -88,8 +88,8 @@ const INITIAL_DATA = {
   tasks: [
     {
       id: 1,
-      title: 'Design Homepage',
-      description: 'Create new dd homepage design with modern UI elements',
+      title: 'UI/UX Redesign',
+      description: 'Redesign the e-commerce platform interface with modern design principles and improved user flow',
       status: 'in-progress',
       priority: 'high',
       projectId: 1,
@@ -98,58 +98,98 @@ const INITIAL_DATA = {
     },
     {
       id: 2,
-      title: 'Implement User Authentication',
-      description: 'Set up secure user authentication system',
+      title: 'Payment Gateway Integration',
+      description: 'Integrate multiple payment gateways with secure transaction handling',
       status: 'pending',
       priority: 'high',
-      projectId: 2,
+      projectId: 1,
       createdAt: new Date().toISOString(),
       dueDate: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString()
     },
     {
       id: 3,
-      title: 'Database Backup',
-      description: 'Create backup of existing database before migration',
-      status: 'completed',
-      priority: 'medium',
-      projectId: 3,
-      createdAt: new Date().toISOString(),
-      dueDate: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
-    },
-    {
-      id: 4,
-      title: 'Payment Gateway Integration',
-      description: 'Integrate Stripe payment gateway',
+      title: 'Biometric Authentication',
+      description: 'Implement secure biometric authentication using Face ID and Touch ID',
       status: 'in-progress',
       priority: 'high',
-      projectId: 4,
+      projectId: 2,
       createdAt: new Date().toISOString(),
       dueDate: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000).toISOString()
     },
     {
-      id: 5,
-      title: 'Product Catalog API',
-      description: 'Develop REST API for product catalog',
+      id: 4,
+      title: 'Transaction Security',
+      description: 'Implement end-to-end encryption for all financial transactions',
       status: 'pending',
-      priority: 'medium',
-      projectId: 4,
+      priority: 'high',
+      projectId: 2,
       createdAt: new Date().toISOString(),
       dueDate: new Date(Date.now() + 12 * 24 * 60 * 60 * 1000).toISOString()
     },
     {
-      id: 6,
-      title: 'Chatbot Training',
-      description: 'Train AI model with customer support data',
+      id: 5,
+      title: 'Data Pipeline Setup',
+      description: 'Set up real-time data pipeline for analytics processing',
       status: 'in-progress',
       priority: 'high',
-      projectId: 5,
+      projectId: 3,
+      createdAt: new Date().toISOString(),
+      dueDate: new Date(Date.now() + 15 * 24 * 60 * 60 * 1000).toISOString()
+    },
+    {
+      id: 6,
+      title: 'ML Model Training',
+      description: 'Train machine learning models for predictive analytics',
+      status: 'pending',
+      priority: 'medium',
+      projectId: 3,
       createdAt: new Date().toISOString(),
       dueDate: new Date(Date.now() + 20 * 24 * 60 * 60 * 1000).toISOString()
     },
     {
       id: 7,
-      title: 'Vulnerability Assessment',
-      description: 'Run automated security scans',
+      title: 'Patient Portal Development',
+      description: 'Create secure patient portal for accessing medical records',
+      status: 'in-progress',
+      priority: 'high',
+      projectId: 4,
+      createdAt: new Date().toISOString(),
+      dueDate: new Date(Date.now() + 8 * 24 * 60 * 60 * 1000).toISOString()
+    },
+    {
+      id: 8,
+      title: 'Appointment System',
+      description: 'Develop automated appointment scheduling system',
+      status: 'pending',
+      priority: 'medium',
+      projectId: 4,
+      createdAt: new Date().toISOString(),
+      dueDate: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000).toISOString()
+    },
+    {
+      id: 9,
+      title: 'Device Integration API',
+      description: 'Create unified API for smart home device integration',
+      status: 'in-progress',
+      priority: 'high',
+      projectId: 5,
+      createdAt: new Date().toISOString(),
+      dueDate: new Date(Date.now() + 12 * 24 * 60 * 60 * 1000).toISOString()
+    },
+    {
+      id: 10,
+      title: 'Automation Rules Engine',
+      description: 'Develop rules engine for smart home automation',
+      status: 'pending',
+      priority: 'medium',
+      projectId: 5,
+      createdAt: new Date().toISOString(),
+      dueDate: new Date(Date.now() + 15 * 24 * 60 * 60 * 1000).toISOString()
+    },
+    {
+      id: 11,
+      title: 'Inventory Tracking System',
+      description: 'Implement real-time inventory tracking system',
       status: 'completed',
       priority: 'high',
       projectId: 6,
@@ -157,141 +197,61 @@ const INITIAL_DATA = {
       dueDate: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString()
     },
     {
-      id: 8,
-      title: 'AWS Setup',
-      description: 'Configure AWS services and networking',
-      status: 'in-progress',
-      priority: 'high',
-      projectId: 7,
-      createdAt: new Date().toISOString(),
-      dueDate: new Date(Date.now() + 15 * 24 * 60 * 60 * 1000).toISOString()
-    },
-    {
-      id: 9,
-      title: 'Load Balancer Configuration',
-      description: 'Set up and configure load balancers',
-      status: 'pending',
-      priority: 'medium',
-      projectId: 7,
-      createdAt: new Date().toISOString(),
-      dueDate: new Date(Date.now() + 18 * 24 * 60 * 60 * 1000).toISOString()
-    },
-    {
-      id: 10,
-      title: 'API Documentation',
-      description: 'Create comprehensive API documentation',
-      status: 'pending',
-      priority: 'low',
-      projectId: 8,
-      createdAt: new Date().toISOString(),
-      dueDate: new Date(Date.now() + 25 * 24 * 60 * 60 * 1000).toISOString()
-    },
-    {
-      id: 11,
-      title: 'Mobile UI Design',
-      description: 'Design mobile app interface and user flows',
-      status: 'in-progress',
-      priority: 'high',
-      projectId: 2,
-      createdAt: new Date().toISOString(),
-      dueDate: new Date(Date.now() + 8 * 24 * 60 * 60 * 1000).toISOString()
-    },
-    {
       id: 12,
-      title: 'Push Notifications',
-      description: 'Implement push notification system',
-      status: 'pending',
-      priority: 'medium',
-      projectId: 2,
-      createdAt: new Date().toISOString(),
-      dueDate: new Date(Date.now() + 16 * 24 * 60 * 60 * 1000).toISOString()
-    },
-    {
-      id: 13,
-      title: 'Database Schema Design',
-      description: 'Design new database schema for migration',
+      title: 'Route Optimization',
+      description: 'Develop AI-based route optimization algorithm',
       status: 'completed',
       priority: 'high',
-      projectId: 3,
+      projectId: 6,
       createdAt: new Date().toISOString(),
       dueDate: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString()
     },
     {
-      id: 14,
-      title: 'Shopping Cart Implementation',
-      description: 'Develop shopping cart functionality',
+      id: 13,
+      title: 'Video Conferencing',
+      description: 'Implement real-time video conferencing feature',
       status: 'in-progress',
       priority: 'high',
-      projectId: 4,
+      projectId: 7,
       createdAt: new Date().toISOString(),
       dueDate: new Date(Date.now() + 9 * 24 * 60 * 60 * 1000).toISOString()
     },
     {
-      id: 15,
-      title: 'Order Management System',
-      description: 'Create order processing and management system',
+      id: 14,
+      title: 'Course Management',
+      description: 'Create course creation and management system',
       status: 'pending',
-      priority: 'high',
-      projectId: 4,
+      priority: 'medium',
+      projectId: 7,
       createdAt: new Date().toISOString(),
       dueDate: new Date(Date.now() + 11 * 24 * 60 * 60 * 1000).toISOString()
     },
     {
-      id: 16,
-      title: 'Chatbot UI Design',
-      description: 'Design chatbot interface and conversation flows',
-      status: 'completed',
-      priority: 'medium',
-      projectId: 5,
-      createdAt: new Date().toISOString(),
-      dueDate: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString()
-    },
-    {
-      id: 17,
-      title: 'Security Report Generation',
-      description: 'Create automated security report generation system',
+      id: 15,
+      title: 'Sentiment Analysis',
+      description: 'Implement NLP-based sentiment analysis for social media posts',
       status: 'in-progress',
-      priority: 'medium',
-      projectId: 6,
-      createdAt: new Date().toISOString(),
-      dueDate: new Date(Date.now() + 6 * 24 * 60 * 60 * 1000).toISOString()
-    },
-    {
-      id: 18,
-      title: 'Cloud Monitoring Setup',
-      description: 'Set up cloud monitoring and alerting system',
-      status: 'pending',
       priority: 'high',
-      projectId: 7,
+      projectId: 8,
       createdAt: new Date().toISOString(),
       dueDate: new Date(Date.now() + 13 * 24 * 60 * 60 * 1000).toISOString()
     },
     {
-      id: 19,
-      title: 'API Rate Limiting',
-      description: 'Implement rate limiting for API endpoints',
-      status: 'in-progress',
+      id: 16,
+      title: 'Trend Prediction',
+      description: 'Develop ML model for social media trend prediction',
+      status: 'pending',
       priority: 'medium',
       projectId: 8,
       createdAt: new Date().toISOString(),
-      dueDate: new Date(Date.now() + 17 * 24 * 60 * 60 * 1000).toISOString()
-    },
-    {
-      id: 20,
-      title: 'API Testing Suite',
-      description: 'Create comprehensive API testing suite',
-      status: 'pending',
-      priority: 'low',
-      projectId: 8,
-      createdAt: new Date().toISOString(),
-      dueDate: new Date(Date.now() + 19 * 24 * 60 * 60 * 1000).toISOString()
+      dueDate: new Date(Date.now() + 16 * 24 * 60 * 60 * 1000).toISOString()
     }
   ],
   teamMembers: [
     {
       id: 1,
-      name: 'John Doe',
-      email: 'john.doe@company.com',
+      name: 'Sarah Chen',
+      email: 'sarah.chen@company.com',
       role: 'project-manager',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -299,8 +259,8 @@ const INITIAL_DATA = {
     },
     {
       id: 2,
-      name: 'Jane Smith',
-      email: 'jane.smith@company.com',
+      name: 'Marcus Rodriguez',
+      email: 'marcus.rodriguez@company.com',
       role: 'developer',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -308,8 +268,8 @@ const INITIAL_DATA = {
     },
     {
       id: 3,
-      name: 'Mike Johnson',
-      email: 'mike.johnson@company.com',
+      name: 'Aisha Patel',
+      email: 'aisha.patel@company.com',
       role: 'designer',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -317,8 +277,8 @@ const INITIAL_DATA = {
     },
     {
       id: 4,
-      name: 'Sarah Wilson',
-      email: 'sarah.wilson@company.com',
+      name: 'James Wilson',
+      email: 'james.wilson@company.com',
       role: 'qa',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -326,8 +286,8 @@ const INITIAL_DATA = {
     },
     {
       id: 5,
-      name: 'Alex Brown',
-      email: 'alex.brown@company.com',
+      name: 'Yuki Tanaka',
+      email: 'yuki.tanaka@company.com',
       role: 'developer',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -335,8 +295,8 @@ const INITIAL_DATA = {
     },
     {
       id: 6,
-      name: 'Emily Davis',
-      email: 'emily.davis@company.com',
+      name: 'Olivia Martinez',
+      email: 'olivia.martinez@company.com',
       role: 'devops',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -344,8 +304,8 @@ const INITIAL_DATA = {
     },
     {
       id: 7,
-      name: 'David Miller',
-      email: 'david.miller@company.com',
+      name: 'David Kim',
+      email: 'david.kim@company.com',
       role: 'developer',
       status: 'inactive',
       joinedDate: new Date().toISOString(),
@@ -353,8 +313,8 @@ const INITIAL_DATA = {
     },
     {
       id: 8,
-      name: 'Lisa Anderson',
-      email: 'lisa.anderson@company.com',
+      name: 'Emma Thompson',
+      email: 'emma.thompson@company.com',
       role: 'project-manager',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -362,8 +322,8 @@ const INITIAL_DATA = {
     },
     {
       id: 9,
-      name: 'Robert Chen',
-      email: 'robert.chen@company.com',
+      name: 'Raj Patel',
+      email: 'raj.patel@company.com',
       role: 'developer',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -371,8 +331,8 @@ const INITIAL_DATA = {
     },
     {
       id: 10,
-      name: 'Maria Garcia',
-      email: 'maria.garcia@company.com',
+      name: 'Sophia Lee',
+      email: 'sophia.lee@company.com',
       role: 'designer',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -380,8 +340,8 @@ const INITIAL_DATA = {
     },
     {
       id: 11,
-      name: 'James Wilson',
-      email: 'james.wilson@company.com',
+      name: 'Carlos Mendez',
+      email: 'carlos.mendez@company.com',
       role: 'qa',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -389,8 +349,8 @@ const INITIAL_DATA = {
     },
     {
       id: 12,
-      name: 'Sophie Taylor',
-      email: 'sophie.taylor@company.com',
+      name: 'Priya Sharma',
+      email: 'priya.sharma@company.com',
       role: 'developer',
       status: 'inactive',
       joinedDate: new Date().toISOString(),
@@ -398,8 +358,8 @@ const INITIAL_DATA = {
     },
     {
       id: 13,
-      name: 'Michael Lee',
-      email: 'michael.lee@company.com',
+      name: 'Alex Johnson',
+      email: 'alex.johnson@company.com',
       role: 'devops',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -407,8 +367,8 @@ const INITIAL_DATA = {
     },
     {
       id: 14,
-      name: 'Emma Thompson',
-      email: 'emma.thompson@company.com',
+      name: 'Maya Patel',
+      email: 'maya.patel@company.com',
       role: 'project-manager',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -416,8 +376,8 @@ const INITIAL_DATA = {
     },
     {
       id: 15,
-      name: 'Daniel Kim',
-      email: 'daniel.kim@company.com',
+      name: 'Lucas Silva',
+      email: 'lucas.silva@company.com',
       role: 'developer',
       status: 'active',
       joinedDate: new Date().toISOString(),
@@ -494,17 +454,29 @@ export const AppProvider = ({ children }) => {
   // Initialize state with data from localStorage
   const [projects, setProjects] = useState(() => {
     const storedProjects = getStoredData(STORAGE_KEYS.PROJECTS);
-    return storedProjects ? storedProjects.map(validateProject) : INITIAL_DATA.projects;
+    if (!storedProjects) {
+      setStoredData(STORAGE_KEYS.PROJECTS, INITIAL_DATA.projects);
+      return INITIAL_DATA.projects;
+    }
+    return storedProjects.map(validateProject);
   });
 
   const [tasks, setTasks] = useState(() => {
     const storedTasks = getStoredData(STORAGE_KEYS.TASKS);
-    return storedTasks ? storedTasks.map(validateTask) : INITIAL_DATA.tasks;
+    if (!storedTasks) {
+      setStoredData(STORAGE_KEYS.TASKS, INITIAL_DATA.tasks);
+      return INITIAL_DATA.tasks;
+    }
+    return storedTasks.map(validateTask);
   });
 
   const [teamMembers, setTeamMembers] = useState(() => {
     const storedTeam = getStoredData(STORAGE_KEYS.TEAM);
-    return storedTeam ? storedTeam.map(validateTeamMember) : INITIAL_DATA.teamMembers;
+    if (!storedTeam) {
+      setStoredData(STORAGE_KEYS.TEAM, INITIAL_DATA.teamMembers);
+      return INITIAL_DATA.teamMembers;
+    }
+    return storedTeam.map(validateTeamMember);
   });
 
   const [selectedProject, setSelectedProject] = useState(null);
