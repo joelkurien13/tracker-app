@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#1bb566">
+        <title>M C Varghese College of Arts and Science</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <style>
+                * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                }
+
+                body {
+                        font-family: Arial, sans-seri;
+                        line-height: 1.6;
+                        color: #333;
+                }
+
+                .tile {
+                        display: inline-block;
+                        background-image: url(https://i.ibb.co/FbMc9PBz/M-C-Varghese-College-of-Arts-Science-1.jpg);
+                        min-height: 89vh;
+                        height: 89vh;
+                        width: 100vw;
+                        background-attachment: fixed;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        flex-direction: column;
+                        text-align: center;
+                        position: relative;
+                        padding: 2rem;
+                        margin-top: 0;
+                }
+
+                .tile h1 {
+                        display: inline-block;
+                        top: 130px;
+                        color: white;
+                        font-weight: 700;
+                        margin-bottom: 1.5rem;
+                        position: absolute;
+                        width: 100vw;
+                        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+                }
+
+                .tile p {
+                        display: inline-block;
+                        margin-bottom: 2rem;
+                        color: #fff;
+                        top: 230px;
+                        font-weight: 500;
+                        position: absolute;
+                        width: 100%;
+                        padding: 10%;
+                        max-width: 600px;
+                        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+                }
+
+                .tile a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0.5rem 1rem;
+                        border: none;
+                        border-radius: 5px;
+                        position: absolute;
+                        background-color: royalblue;
+                        cursor: pointer;
+                        color: white;
+                        text-decoration: none;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        width: 280px;
+                        height: 45px;
+                        top: 360px
+                }
+
+                .tile a:hover {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0.5rem 1rem;
+                        border: none;
+                        border-radius: 8px;
+                        text-decoration: none;
+                        position: absolute;
+                        background: black;
+                        color: orange;
+                        transition: 2s;
+                        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+                }
+
+                .header {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 5%;
+                        padding: 1.3rem 10%;
+                        background-color: white;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        z-index: 100;
+                }
+
+                .header::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, .1);
+                        backdrop-filter: blur(50px);
+                        z-index: -1;
+                }
+
+                .about {
+                        padding: 4rem 2rem;
+                        background-color: #f8f9fa;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                }
+
+                .about h1 {
+                        text-align: center;
+                        color: royalblue;
+                        font-size: 2rem;
+                        margin-bottom: 2rem;
+                        text-decoration: underline;
+                }
+
+                .about p {
+                        position: relative;
+                        max-width: 800px;
+                        margin: 0 auto;
+                        text-align: justify;
+                        color: #333;
+                        line-height: 1.8;
+                        font-weight: 700;
+                        font-family: Sans-Serif;
+                }
+
+                .vsion {
+                        padding: 4rem 2rem;
+                        background-color: #f8f9fa;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                }
+
+                .vsion h1 {
+                        text-align: center;
+                        color: royalblue;
+                        font-size: 2rem;
+                        margin-bottom: 2rem;
+                        text-decoration: underline;
+                }
+
+                .vsion p {
+                        position: relative;
+                        max-width: 800px;
+                        margin: 0 auto;
+                        text-align: justify;
+                        color: #333;
+                        line-height: 1.8;
+                        font-weight: 700;
+                        font-family: Sans-Serif;
+                }
+
+                .msion {
+                        padding: 4rem 2rem;
+                        background-color: #f8f9fa;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                }
+
+                .msion h1 {
+                        text-align: center;
+                        color: royalblue;
+                        font-size: 2rem;
+                        margin-bottom: 2rem;
+                        text-decoration: underline;
+                }
+
+                .msion ul {
+                        position: relative;
+                        max-width: 800px;
+                        margin: 0 auto;
+                        text-align: justify;
+                        color: #333;
+                        line-height: 1.8;
+                        font-weight: 700;
+                        font-family: Sans-Serif;
+                }
+
+                .abtimg {
+                        padding: 4rem 2rem;
+                        background-color: #f8f9fa;
+                }
+
+                footer {
+                        background-color: #333;
+                        color: white;
+                        text-align: center;
+                        padding: 2rem;
+                        bottom: 0;
+                }
+
+                footer p {
+                        margin: 0.5rem 0;
+                        bottom: 0;
+                }
+
+                footer a {
+                        color: royalblue;
+                        font-weight: 700;
+                        font-size: 1rem;
+                        padding: 0.1rem 0.2rem;
+                        bottom: 0;
+                }
+
+                img {
+                        top: 0;
+                        left: 0;
+                        position: fixed;
+                        display: grid;
+                        grid-template-columns: 150px 100px;
+                }
+
+                .navbar {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                }
+
+                .navbar a,
+                .navbar button {
+                        color: black;
+                        text-decoration: none;
+                        font-size: 1rem;
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        font-weight: 700;
+                        top: 0;
+                }
+
+                .navbar a:hover {
+                        color: royalblue;
+
+                }
+
+                #check {
+                        display: none;
+                }
+
+                .icons {
+                        display: none;
+                        color: black;
+                        font-size: 1.8rem;
+                        cursor: pointer;
+                        top: 0;
+                        right: 10px;
+                        position: fixed;
+                        background-color: lightgreen;
+                }
+
+                .icons:hover {
+                        background-color: royalblue;
+                        transition: 0.1s;
+                        transform: rotate(360deg);
+                }
+
+                @media (max-width: 768px) {
+                        .icons {
+                                display: block;
+                        }
+
+                        .navbar {
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                width: 100%;
+                                background: rgba(255, 255, 255, 0.9);
+                                flex-direction: column;
+                                align-items: center;
+                                padding: 1rem 0;
+                                display: none;
+                        }
+
+                        #check:checked+label+.navbar {
+                                display: flex;
+                                padding: 2.5rem;
+                        }
+                }
+
+                @media (min-width: 999px) {
+                        .logo img {
+                                position: absolute;
+                                top: 45%;
+                                left: 0;
+                                transform: translateY(-50%);
+                                padding: 0;
+                                width: 30%;
+                                height: 100px;
+                        }
+
+                        .header {
+                                width: 100%;
+                                height: 5%;
+                        }
+
+                        .tile {
+                                display: inline-block;
+                                background-image: url(https://i.ibb.co/FbMc9PBz/M-C-Varghese-College-of-Arts-Science-1.jpg);
+                                min-height: 50vh;
+                                height: 50vh;
+                                width: 100vw;
+                                background-attachment: fixed;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: white;
+                                flex-direction: column;
+                                text-align: center;
+                                position: relative;
+                                padding: 2rem;
+                                margin-top: 0;
+                        }
+
+                        .tile h1 {
+                                display: inline-block;
+                                top: 400px;
+                                color: white;
+                                font-size: 2.1rem;
+                                font-weight: 700;
+                                margin-bottom: 1.5rem;
+                                position: absolute;
+                                width: 100vw;
+                                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+                        }
+
+                        .tile p {
+                                display: inline-block;
+                                margin-bottom: 2rem;
+                                color: #fff;
+                                top: 390px;
+                                font-weight: 500;
+                                position: absolute;
+                                width: 100%;
+                                padding: 7%;
+                                max-width: 600px;
+                                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+                        }
+
+                        .tile a {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 0.5rem 1rem;
+                                border: none;
+                                border-radius: 5px;
+                                position: absolute;
+                                background-color: royalblue;
+                                cursor: pointer;
+                                color: white;
+                                text-decoration: none;
+                                font-size: 1.4rem;
+                                font-weight: 700;
+                                width: 280px;
+                                height: 45px;
+                                top: 540px
+                        }
+                }
+        </style>
+</head>
+
+<body>
+        <header class="header">
+                <a href="#" class="logo">
+                        <img src="https://i.ibb.co/bjMd7k35/images-q-tbn-ANd9-Gc-QDx-NJKTx-Uw7nhchu-Ibt-Yv-Wgje-EUwg-No4i0-Fi-Vf-C2-Y-s-0.jpg"
+                                alt="" width="150" height="40" />
+                </a>
+                <input type="checkbox" id="check" />
+                <label for="check" class="icons">
+                        <i class="bx bx-menu" id="menu-icon"></i>
+                </label>
+                <nav class="navbar">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Department</a>
+                        <a href="#">Contact</a>
+                        <button>Apply Now</button>
+                </nav>
+        </header>
+        <div class="tile">
+                <h1>Step into a Legacy of Learning At M C Varghese College</h1>
+                <p>"we don’t just educate minds we shape futures. Welcome to a campus built on the dreams of a
+                        visionary"</p>
+                <a href="#">Apply for Admission</a>
+        </div>
+        <div class="about">
+                <h1>About</h1>
+                <p>M. C. Varghese College of Arts & Science(Estd. 2011) is a fit memorial for the great visionary who
+                        left an indelible imprint on the sensibilities of his contemporary Malayalees through an
+                        impressive array of publications. After his demise in 2006, his friends and relatives wanted to
+                        erect a suitable memorial as an encomium to this multi–faceted genius and the Arts College
+                        bearing his name was the outcome. Initially the college was opened in the Mangalam Press
+                        building at Neelimangalam, Kottayam. When a multi–storey modern building was finished at
+                        Mangalam Campus, Ettumanoor, the College was shifted to the new premises in 2014. Since its
+                        inception in 2011, the college is affiliated to Mahatma Gandhi University, Kottayam.
+                </p>
+        </div>
+        <div class="vsion">
+                <h1>OUR VISION</h1>
+                <p>Our vision is to be a pioneering institution, shaping the future of education by cultivating an
+                        ecosystem of relentless curiosity, interdisciplinary collaboration, and entrepreneurial spirit.
+                        We are committed to empowering every student to unlock their unique potential, emerge as
+                        adaptive problem-solvers, and become catalysts for positive societal transformation, driven by
+                        both academic excellence and unwavering human values. </p>
+        </div>
+        <div class="msion">
+                <h1>OUR MISION</h1>
+                <ul>
+                        <li>To provide high-quality, inclusive, and value-based education that empowers students to
+                                realize their full potential.</li>
+                        <li>To foster a learner-centric environment that promotes creativity, critical thinking, and
+                                lifelong learning.</li>
+                        <li>To encourage research, innovation, and entrepreneurship that contributes to societal and
+                                national development.</li>
+                        <li>To instill ethical values, leadership qualities, and a sense of responsibility toward
+                                community and environment</li>
+                        <li>To build strong industry and academic linkages to ensure employability and relevance in a
+                                changing world.</li>
+                </ul>
+        </div>
+        <footer>
+                <p>
+                        &copy; 2025 Mangalam College of Arts and Science, Ettumanoor
+                </p>
+                <p>Designed by<a href="https://www.instagram.com/vivek._.ps?igsh=bmpjNmh2Y2J2ZmR2">VIVEK!</a></p>
+        </footer>
+</body>
+
+</html>

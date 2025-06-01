@@ -1,29 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useAppContext } from '../context/AppContext';
 import '../styles.css';
 
 const Tasks = () => {
-  const [tasks, setTasks] = useState([]);
+  const { tasks, addTask, updateTask, deleteTask } = useAppContext();
   const [newTask, setNewTask] = useState({
     title: '',
     description: '',
     status: 'pending',
     priority: 'medium',
-    dueDate: ''
+    dueDate: '',
+    projectId: null
   });
   const [filter, setFilter] = useState('all');
-
-  // Load tasks from localStorage on component mount
-  useEffect(() => {
-    const savedTasks = localStorage.getItem('tasks');
-    if (savedTasks) {
-      setTasks(JSON.parse(savedTasks));
-    }
-  }, []);
-
-  // Save tasks to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -37,32 +26,23 @@ const Tasks = () => {
     e.preventDefault();
     if (!newTask.title.trim()) return;
 
-    const task = {
-      id: Date.now(),
-      ...newTask,
-      createdAt: new Date().toISOString()
-    };
-
-    setTasks(prev => [...prev, task]);
+    addTask(newTask);
     setNewTask({
       title: '',
       description: '',
       status: 'pending',
       priority: 'medium',
-      dueDate: ''
+      dueDate: '',
+      projectId: null
     });
   };
 
   const handleStatusChange = (taskId, newStatus) => {
-    setTasks(prev =>
-      prev.map(task =>
-        task.id === taskId ? { ...task, status: newStatus } : task
-      )
-    );
+    updateTask(taskId, { status: newStatus });
   };
 
   const handleDeleteTask = (taskId) => {
-    setTasks(prev => prev.filter(task => task.id !== taskId));
+    deleteTask(taskId);
   };
 
   const filteredTasks = tasks.filter(task => {
@@ -143,7 +123,9 @@ const Tasks = () => {
             <h3>{task.title}</h3>
             <p>{task.description}</p>
             <div className="task-meta">
-              <span className="due-date">Due: {task.dueDate}</span>
+              <span className="due-date">
+                Due: {new Date(task.dueDate).toLocaleDateString()}
+              </span>
               <span className={`priority-badge ${task.priority}`}>
                 {task.priority}
               </span>
